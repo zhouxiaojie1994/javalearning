@@ -31,6 +31,24 @@ public class Node {
 		return this;
 	}
 	
+	
+	//删除下个节点
+	public void removeNext() {
+		//获取下下个节点
+		Node newNext=next.next;
+		//下下个节点连接当前节点
+		this.next=newNext;
+	}
+	
+	//插入到一个节点
+	public void insert(Node node) {
+		//取出下一个节点，作为下下个节点
+		Node nextNext=next;
+		//把新节点作为当前节点的下个节点
+		this.next=node;
+		//把下下个节点作为新节点的下个节点
+		node.next=nextNext;
+	}
 	//获取下个节点
 	public Node next() {
 		return this.next;
@@ -44,5 +62,19 @@ public class Node {
 	//当前节点是否为最后一个节点
 	public boolean isLast() {
 		return next==null;
+	}
+	//显示所有节点
+	public void show() {
+		Node curNode=this;
+		while(true) {
+			System.out.print(curNode.data+",");
+			//获取下个节点
+			curNode=curNode.next;
+			//如果是最后一个节点
+			if(curNode==null) {
+				break;
+			}
+		}
+		System.out.println();
 	}
 }

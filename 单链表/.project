@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>队列</name>
-=======
 	<name>单链表</name>
->>>>>>> 添加单链表相关代码
 	<comment></comment>
 	<projects>
 	</projects>
